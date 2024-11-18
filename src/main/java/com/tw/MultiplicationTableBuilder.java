@@ -42,4 +42,10 @@ public class MultiplicationTableBuilder {
     public String genMultiplicaitonResult(int number1,int number2){
         return number1 + "*" + number2 + "=" + number1 * number2;
     }
+
+    public String genConjunction(int number1,int number2){
+        if(number1 != number2)
+            return " ";
+        else return "\n";
+    }
 }
