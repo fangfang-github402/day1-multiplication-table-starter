@@ -48,4 +48,13 @@ public class MultiplicationTableBuilder {
             return " ";
         else return "\n";
     }
+
+    public String printMultiplicationTable(int[] numbers){
+        StringBuilder table = new StringBuilder();
+        IntStream.range(0, numbers.length)
+                .forEach(i -> IntStream.range(0, i+1)
+                        .mapToObj(j -> genMultiplicaitonResult(numbers[j], numbers[i]) + (j < numbers.length ? genConjunction(numbers[i], numbers[j]):""))
+                        .forEach(table::append));
+        return table.toString();
+    }
 }
