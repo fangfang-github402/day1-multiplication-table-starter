@@ -18,4 +18,8 @@ public class MultiplicationTableBuilder {
     public boolean isStartNotBiggerThanEnd(int startNumber,int endNumber){
         return startNumber <= endNumber;
     }
+
+    public boolean isInRange(int number){
+        return number >=1 && number <= 1000;
+    }
 }
