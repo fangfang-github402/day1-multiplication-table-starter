@@ -14,7 +14,7 @@ class MultiplicationTableBuilderTest {
         int end = 4;
         //when
         String multiplicationTable = builder.genMultiplicationTable(start, end);
-        String expectedMultiplicationTable = String.format("2*2=4%n2*3=6 3*3=9%n2*4=8 3*4=12 4*4=16%n");
+        String expectedMultiplicationTable = String.format("2*2=4\n2*3=6 3*3=9\n2*4=8 3*4=12 4*4=16\n");
         //then
         assertEquals(expectedMultiplicationTable, multiplicationTable);
     }
