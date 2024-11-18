@@ -1,5 +1,7 @@
 package com.tw;
 
+import java.util.stream.IntStream;
+
 public class MultiplicationTableBuilder {
 
     public static void main(String[] args) {
@@ -31,5 +33,9 @@ public class MultiplicationTableBuilder {
         if (!isInRange(endNumber))
             return false;
         return true;
+    }
+
+    public int[] genNumbersArray(int startNumber,int endNumber){
+        return IntStream.rangeClosed(startNumber, endNumber).toArray();
     }
 }
