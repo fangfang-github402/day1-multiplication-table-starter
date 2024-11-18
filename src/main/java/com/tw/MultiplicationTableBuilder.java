@@ -14,7 +14,10 @@ public class MultiplicationTableBuilder {
     }
 
     public String genMultiplicationTable(int startNumber,int endNumber) {
-        return "";
+        if(!checkNumber(startNumber,endNumber))
+            return null;
+        int[] numbers = genNumbersArray(startNumber,endNumber);
+        return printMultiplicationTable(numbers);
     }
 
     public boolean isStartNotBiggerThanEnd(int startNumber,int endNumber){
