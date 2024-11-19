@@ -51,7 +51,7 @@ public class MultiplicationTableBuilder {
     public String genConjunction(int number1,int number2){
         if(number1 != number2)
             return " ";
-        else return "\n";
+        else return System.lineSeparator();
     }
 
     public String printMultiplicationTable(int[] numbers){
