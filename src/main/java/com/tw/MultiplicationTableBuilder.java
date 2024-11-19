@@ -16,7 +16,7 @@ public class MultiplicationTableBuilder {
     }
 
     public String genMultiplicationTable(int startNumber,int endNumber) {
-        if(!checkNumber(startNumber,endNumber))
+        if(!isValid(startNumber,endNumber))
             return null;
         int[] numbers = genNumbersArray(startNumber,endNumber);
         return printMultiplicationTable(numbers);
@@ -30,14 +30,8 @@ public class MultiplicationTableBuilder {
         return number >= MIN_NUMBER && number <= MAX_NUMBER;
     }
 
-    public boolean checkNumber(int startNumber,int endNumber){
-        if(!isStartNotBiggerThanEnd(startNumber,endNumber))
-            return false;
-        if (!isInRange(startNumber))
-            return false;
-        if (!isInRange(endNumber))
-            return false;
-        return true;
+    public boolean isValid(int startNumber,int endNumber){
+        return isStartNotBiggerThanEnd(startNumber,endNumber) && isInRange(startNumber) && isInRange(endNumber);
     }
 
     public int[] genNumbersArray(int startNumber,int endNumber){
