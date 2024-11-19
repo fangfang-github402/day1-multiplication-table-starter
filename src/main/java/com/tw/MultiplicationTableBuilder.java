@@ -3,6 +3,8 @@ package com.tw;
 import java.util.stream.IntStream;
 
 public class MultiplicationTableBuilder {
+    public static int MIN_NUMBER = 1;
+    public static int MAX_NUMBER = 1000;
 
     public static void main(String[] args) {
         MultiplicationTableBuilder builder = new MultiplicationTableBuilder();
@@ -25,7 +27,7 @@ public class MultiplicationTableBuilder {
     }
 
     public boolean isInRange(int number){
-        return number >=1 && number <= 1000;
+        return number >= MIN_NUMBER && number <= MAX_NUMBER;
     }
 
     public boolean checkNumber(int startNumber,int endNumber){
